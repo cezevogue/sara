@@ -1,0 +1,272 @@
+@font-face {
+    font-family: 'Iceland-Regular';
+    src: url("../polices/Iceland-Regular.ttf") format("truetype")
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: auto;
+}
+
+html {
+    position: fixed;
+    overflow: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* logo */
+#logoStarIsland {
+    position: absolute;
+    height: auto;
+    width: 165px;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+/* Compte à Rebours */
+.box-rebours {
+    position: absolute;
+    top: 100px;
+    right: 25%;
+    width: 50%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.box_jour,
+.box_heure,
+.box_minute,
+.box_seconde {
+    padding: 10px;
+    color: white;
+    font-family: "Iceland-Regular";
+    font-size: 1.5rem;
+}
+
+#jour,
+#heure,
+#minute,
+#seconde {
+    padding: 10px 20px;
+    color: white;
+    font-size: 4.5rem;
+    font-weight: bold;
+    font-family: "Iceland-Regular";
+}
+
+#separator {
+    color: white;
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-family: "Iceland-Regular";
+}
+
+/* background image */
+.parent {
+    text-align: start;
+}
+
+#teaser_image {
+    object-position: left;
+    width: auto;
+    height: 100vh;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 35%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 35%);
+    z-index: auto;
+}
+
+/* reseaux */
+.container_reseaux {
+    visibility: hidden;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 25px;
+    z-index: 25;
+}
+
+.reseaux {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 0.5em #8a8a8a;
+    border-radius: 25px;
+}
+
+.reseaux img {
+    margin: 0 7px;
+}
+
+.logoDiscord2 {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    z-index: 50;
+}
+
+/* texte */
+#texte {
+    position: absolute;
+    top: 120px;
+    left: 60%;
+    width: 35%;
+    color: #EA4C6F;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Iceland-Regular";
+}
+
+/* degrade */
+#degrade {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 30%;
+    background-color: black;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    z-index: 20;
+}
+
+/*////////// MOBILE FIRST //////////*/
+@media (max-width: 634px) {
+
+    /* logo */
+    #logoStarIsland {
+        position: absolute;
+        height: auto;
+        width: 135px;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+    }
+
+    /* texte */
+    #texte {
+        position: absolute;
+        top: 305px;
+        left: 65px;
+        width: 70%;
+        color: #EA4C6F;
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: "Iceland-Regular";
+        text-align: center;
+    }
+
+    /* Compte à Rebours */
+    .box-rebours {
+        position: absolute;
+        top: 195px;
+        margin: 0 auto;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .box_jour,
+    .box_heure,
+    .box_minute,
+    .box_seconde {
+        padding: 10px;
+        color: white;
+        font-family: "Iceland-Regular";
+        font-size: 1rem;
+    }
+
+    #jour,
+    #heure,
+    #minute,
+    #seconde {
+        padding: 5px 10px;
+        color: white;
+        font-size: 2.5rem;
+        font-weight: bold;
+        font-family: "Iceland-Regular";
+    }
+
+    #separator {
+        color: white;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        font-family: "Iceland-Regular";
+    }
+
+    /* reseaux */
+    .container_reseaux {
+        visibility: hidden;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 25px;
+        z-index: 25;
+    }
+
+    .reseaux {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 0 0.5em #8a8a8a;
+        border-radius: 20px;
+    }
+
+    .reseaux img {
+        margin: 0 6px;
+        height: 30px;
+        width: auto;
+    }
+
+    #discordLogo {
+        height: 40px;
+        width: auto;
+    }
+
+    .logoDiscord2 {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 27px;
+        z-index: 50;
+    }
+
+    .logoDiscord2 img {
+        height: 40px;
+        width: auto;
+    }
+
+    /* degrade */
+    #degrade {
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        height: 30%;
+        background-color: black;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+        z-index: 20;
+    }
+}
